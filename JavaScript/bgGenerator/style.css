@@ -1,0 +1,43 @@
+body {
+	font: 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    top: 15%;
+	background: linear-gradient(to right, red , yellow); /* Standard syntax */
+}
+
+h1 {
+    font: 600 3.5em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    width: 100%;
+}
+
+h3 {
+	font: 900 1em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.01em;
+
+}
+
+#randomNrBtn {
+    margin: 0;
+    border: 2px solid white;
+    border-radius: 0.12em;
+    outline: none;
+    cursor: pointer;
+    padding: .8em 1.2em;
+    color: white;
+    background-color: transparent;
+}
+
+#randomNrBtn:hover {
+    background-color: white;
+    color: #777;
+}
