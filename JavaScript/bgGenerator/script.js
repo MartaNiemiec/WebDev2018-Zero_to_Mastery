@@ -1,3 +1,10 @@
+var _ = require('lodash')
+
+var array = [1,2,3,4,5,6,7,8];
+console.log('answer: ', _.without(array, 3))	//"_.without"=lodash method with two parameters (array, without which item will be a new array)
+//to works it we have update our bundle.js file in command line
+
+
 var css = document.querySelector("h3");
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
