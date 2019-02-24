@@ -42,18 +42,42 @@ const urls = [
   'https://jsonplaceholder.typicode.com/albums'
 ]
 
+// const getData2 = async function() {
+//   const [ users, posts, albums ] = await Promise.all(urls.map(url => {
+//     const resp = fetch(url);
+//     const data = resp.json();
+//     console.log(data) ;
+//   }
+//   ));
+//   console.log('users', users);
+//   console.log('posts', posts);
+//   console.log('albums', albums);
+// }
+// getData2();
+
 const getData2 = async function() {
-  const [ users, posts, albums ] = await Promise.all(urls.map(url => {
-    const resp = fetch(url);
-    const data = resp.json();
-    console.log(data) ;
-  }
-  ));
+  const [ users, posts, albums ] = await Promise.all(urls.map(async function(url) {
+      const response = await fetch(url);
+      return response.json();
+  }));
   console.log('users', users);
   console.log('posts', posts);
   console.log('albums', albums);
 }
-getData2();
 
 // #3) Add a try catch block to the #2 solution in order to catch any errors.
 // Now chnage one of the urls so you console.log your error with 'ooooooops'
+
+const getData3 = async function() {
+  try {
+    const [ users, posts, albums ] = await Promise.all(urls.map(async function(url) {
+    const response = await fetch(url);
+    return response.json();
+    }));
+    console.log('users', users);
+    console.log('posts', posts);
+    console.log('albums', albums);
+  } catch (err) {
+    console.log('ooops! something went wrong', err)
+  }
+}
