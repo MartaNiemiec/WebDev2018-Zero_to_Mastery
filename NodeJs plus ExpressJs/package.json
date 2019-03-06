@@ -4,12 +4,15 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon serverExpress.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
   }
 }
